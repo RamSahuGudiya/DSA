@@ -1,0 +1,32 @@
+const arr = [
+  'Narendra',
+  'Bill',
+  'Elon',
+  'Donald',
+  'Elon',
+  'Sundar',
+  'Ambani',
+  'steve',
+  'Indra',
+  'Donald',
+];
+
+const output = [];
+
+let flag = false;
+
+for (let i = 0; i < arr.length; i++) {
+  for (let k = 0; k < output.length; k++) {
+    if (arr[i] === output[k]) {
+      flag = true;
+      break;
+    }
+  }
+
+  if (!flag) {
+    output.push(arr[i]);
+  }
+  flag = false;
+}
+
+console.log(output);
