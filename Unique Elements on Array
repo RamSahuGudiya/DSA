@@ -17,15 +17,14 @@ let flag = false;
 
 for (let i = 0; i < arr.length; i++) {
   for (let k = 0; k < output.length; k++) {
-    if (arr[i] === output[k]) {
+    if (arr[i] === output[k]) 
       flag = true;
-      break;
-    }
+    //  break;
   }
 
-  if (!flag) {
+  if (!flag) 
     output.push(arr[i]);
-  }
+  
   flag = false;
 }
 
