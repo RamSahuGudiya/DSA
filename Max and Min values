@@ -1,0 +1,24 @@
+const arr = [5, 10, 0, 15, 20, 30, 40, 70];
+
+let min = 0;
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] < min) min = arr[i];
+}
+console.log(min);
+
+//forEach loop
+let max = 0;
+const maxVal = arr.forEach(function (mov) {
+  if (mov > max) {
+    max = mov;
+  }
+  return max;
+});
+console.log(max);
+
+//reduce method
+const maxValue = arr.reduce((maxi, curr) => {
+  if (curr > maxi) maxi = curr;
+  return maxi;
+}, 0);
+console.log(maxValue);
