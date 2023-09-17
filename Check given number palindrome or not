@@ -1,0 +1,13 @@
+
+let number = 121;
+let reverse = 0;
+const original = number;
+while (number > 0) {
+  let reminder = number % 10;
+  reverse = reverse * 10 + reminder;
+  number = Math.trunc(number / 10);
+}
+console.log(reverse);
+
+const validation = reverse === original ? 'palindrome' : 'Not a palindrome';
+console.log(validation);
