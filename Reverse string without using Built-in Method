@@ -1,0 +1,15 @@
+const fullName = 'ram sahu'.split('');
+
+const len = fullName.length;
+
+function reverseu(name) {
+  for (let i = 0; i < len / 2; i++) {
+    let temp = name[i];
+    name[i] = name[len - 1 - i];
+    name[len - 1 - i] = temp;
+  }
+  // console.log(name);
+  return name.join('');
+}
+
+console.log(reverseu(fullName));
