@@ -1,0 +1,16 @@
+let first = 0;
+let second = 1;
+
+console.log(first);
+console.log(second);
+
+let temp = 0;
+while (temp < 10) {
+  temp = first + second;
+  if (temp >= 10) {
+    break;
+  }
+  console.log(temp);
+  first = second;
+  second = temp;
+}
