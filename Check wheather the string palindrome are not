@@ -1,0 +1,16 @@
+const fullName = 'lol'.split('');
+const original = fullName.join('')
+const len = fullName.length;
+
+const demo=(name)=>{
+for(let i =0; i<len/2; i++){
+ let temp =  name[i];
+ name[i]=name[len-1-i];
+  name[len-1-i] = temp;
+}
+  return name.join('');
+}
+  const revName = demo(fullName);
+
+const validity = original === revName ? 'palindrome' : 'Not';
+console.log(validity);
