@@ -1,0 +1,15 @@
+const arr = [1, 2, 3, 5, 5, 2, 7, 3, 1];
+let sum = [];
+let count = 0;
+for (let i = 0; i < arr.length; i++) {
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[i] === arr[j]) {
+      sum.push(arr[i] + arr[j]);
+      count++;
+      //   break;
+    }
+  }
+}
+console.log('Count:', count);
+
+console.log('sum of pairs:', sum);
