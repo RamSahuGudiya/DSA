@@ -1,0 +1,24 @@
+const strng = 'Jumpalahari'.split('');
+
+const strOutput = [];
+
+let flag = false;
+
+function demo(str) {
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < strOutput.length; j++) {
+      if (str[i] === strOutput[j]) {
+        flag = true;
+        break;
+      }
+    }
+    //   console.log(flag);
+    if (!flag) {
+      strOutput.push(str[i]);
+    }
+    flag = false;
+  }
+  return strOutput.join('');
+}
+
+console.log(demo(strng));
