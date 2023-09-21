@@ -8,7 +8,7 @@
 
 4)How do you find the count for the occurrence of a particular character in a string?
 
-5)How do you find the non-matching characters in a string?
+5)How do you find the non-matching characters in a string?✅
 
 6)How do you find out if the two given strings are anagrams?
 
