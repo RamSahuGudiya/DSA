@@ -1,0 +1,43 @@
+// Just using nested if statements within a function
+
+const year = 1200;
+function isLeapYear(year) {
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        return 'Leap year';
+      } else {
+        return 'not a leap year';
+      }
+    } else {
+      return 'leap year';
+    }
+  } else {
+    return 'not a leap year';
+  }
+}
+console.log(isLeapYear(year));
+
+
+
+
+//list of years using Map Method
+
+const year1 = [2004, 2012, 1200, 1600, 1700, 2010, 1800, 1900];
+
+const verify = year1.map(function (mov) {
+  if (mov % 4 === 0) {
+    if (mov % 100 === 0) {
+      if (mov % 400 === 0) {
+        return 'Leap year';
+      } else {
+        return 'not a leap year';
+      }
+    } else {
+      return 'leap year';
+    }
+  } else {
+    return 'not a leap year';
+  }
+});
+console.log(verify);
