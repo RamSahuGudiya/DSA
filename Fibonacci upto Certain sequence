@@ -1,0 +1,45 @@
+function fibonacciGenerator(n) {
+  let first = 0;
+  let second = 1;
+  const newArr = [];
+  let temp;
+  for (let i = 1; i <= n; i++) {
+    if (i === 1) {
+      newArr.push(first);
+    }
+    if (i === 2) {
+      newArr.push(second);
+    } else if (i < n) {
+      temp = first + second;
+      first = second;
+      second = temp;
+      newArr.push(temp);
+    }
+  }
+  return newArr;
+}
+console.log(fibonacciGenerator(14));
+
+// function fibonacciGenerator(n) {
+//   let first = 0;
+//   let second = 1;
+//   let fibboArray;
+//   if (n === 1) {
+//     fibboArray = [first];
+//     return fibboArray;
+//   } else if (n === 2) {
+//     fibboArray = [first, second];
+//     return fibboArray;
+//   }
+//   let temp = 0;
+//   fibboArray = [first, second];
+//   for (let i = 3; i <= n; i++) {
+//     temp = first + second;
+//     fibboArray.push(temp);
+//     first = second;
+//     second = temp;
+//   }
+//   return fibboArray;
+// }
+
+// console.log(fibonacciGenerator(5));
