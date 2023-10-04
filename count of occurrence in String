@@ -1,0 +1,16 @@
+const fullName = 'hello world'.split('');
+console.log(fullName);
+
+let count = 0;
+
+const occurance = function (preferstr) {
+  for (let i = 0; i < fullName.length; i++) {
+    if (preferstr === fullName[i]) {
+      count++;
+    }
+  }
+
+  return count;
+};
+
+console.log(occurance('l'));
