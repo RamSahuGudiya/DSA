@@ -6,7 +6,7 @@
 
 3)How do you calculate the number of numerical digits in a string?
 
-4)How do you find the count for the occurrence of a particular character in a string?
+4)How do you find the count for the occurrence of a particular character in a string?✅
 
 5)How do you find the non-matching characters in a string?✅
 
