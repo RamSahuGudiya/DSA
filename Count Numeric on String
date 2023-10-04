@@ -1,0 +1,13 @@
+const fullName = 'luckyLaxman197900'.split('');
+
+let count = 0;
+const digitsOnStr = function () {
+  for (let i = 0; i < fullName.length; i++) {
+    if (fullName[i] >= '0' && fullName[i] <= '9') {
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log(digitsOnStr(fullName));
