@@ -1,0 +1,31 @@
+const checkFrequency = function (n, freq) {
+  while (n > 0) {
+    let digit = n % 10;
+    freq.fill(1, digit, digit + 1);
+    n /= 10;
+  }
+  console.log(freq);
+};
+let flag;
+const areAnagram = function (a, b) {
+  const freqA = new Array(10);
+  const freqB = new Array(10);
+  checkFrequency(a, freqA);
+  checkFrequency(b, freqB);
+  flag = false;
+  for (let i = 0; i < 10; i++) {
+    if (freqA[i] !== freqB[i]) {
+      flag = true;
+    }
+  }
+  return flag;
+};
+
+const a = 123;
+const b = 321;
+
+if (!areAnagram(a, b)) {
+  console.log('Yes');
+} else {
+  console.log('No');
+}
