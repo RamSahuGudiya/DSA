@@ -26,4 +26,4 @@
 
 13)How do you find the average of numbers in a list?
 
-14)How do you check if an integer is even or odd?
+14)How do you check if an integer is even or odd?✅
