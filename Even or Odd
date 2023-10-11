@@ -1,0 +1,3 @@
+let num = 12;
+const verify = num % 2 === 0 ? 'even' : 'odd';
+console.log(verify);
