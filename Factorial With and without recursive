@@ -1,0 +1,27 @@
+//Without Recursive
+
+function fact(n){
+    let count =1;
+    if(n===0){
+        return 1;
+    }else{
+        for(let i =1; i<=n; i++){
+        count = count*i;
+    }
+        return count;
+}
+}
+console.log(fact(5));
+
+
+
+//With recursive
+
+function func(n){
+  if(n===0||n===1){
+    return 1;
+  }else{
+    return n*func(n-1)
+  }
+}
+console.log(func(5));
