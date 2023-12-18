@@ -1,3 +1,7 @@
+//Do not use this code it has a data leakage
+//(ie value 1 travels 
+//all way to the else if and executed as second if conditions fail)
+
 function fibonacciGenerator(n) {
   let first = 0;
   let second = 1;
@@ -9,7 +13,10 @@ function fibonacciGenerator(n) {
     }
     if (i === 2) {
       newArr.push(second);
+      console.log(i); //2
     } else if (i < n) {
+      console.log(i); //1
+
       temp = first + second;
       first = second;
       second = temp;
@@ -18,7 +25,8 @@ function fibonacciGenerator(n) {
   }
   return newArr;
 }
-console.log(fibonacciGenerator(14));
+console.log(fibonacciGenerator(3));
+
 
 // function fibonacciGenerator(n) {
 //   let first = 0;
