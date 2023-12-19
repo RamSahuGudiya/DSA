@@ -1,3 +1,43 @@
+//STEP 1: Take an array of two object freq1 & freq2(which contains 10 empty blocks)
+//STEP 2: Take ani two similar digits number
+//STEP 3: Create a function "checkFrequency"
+//STEP 4: Pass the frequencys(freq1 & freq2) and number which belongs to the frequencies(num1 & num2) into the function seperately
+//STEP 5: In checkFrequency extract the numbers(num1 and num2 separately) and passed/fill into frequency(freq1 and freq2 separately)
+with its respective position
+//STEP 6: Create an another function "isAnagram" and call the "check frequency" function inside of it
+//STEP 7: Then compare the frequencies to check whether they match or not using "For Loop"
+//STEP 8: If frequency doesn't match then make it as true(bool) and assign it to flag variable the return flag
+//STEP 9: Then validate the isAnagram function (which returns bool) using ternary operator
+//STEP 10: If function return true(!true=false) then "Not a Anagram" else anagram
+
+CODE:
+function checkFrequency(freq, num) {
+  while (num > 0) {
+    let rem = num % 10; //  123%10 = 3  12%10=2  1%10 =1
+    freq.fill(1, rem, rem + 1);
+    num = Math.trunc(num / 10); // 123/10=12    12/10 = 1    1/10 = 0
+  }
+  return freq;
+}
+
+const freq1 = new Array(10);
+const freq2 = new Array(10);
+function isAnagram(num1, num2) {
+  let flag = false;
+  console.log(checkFrequency(freq1, num1));
+  console.log(checkFrequency(freq2, num2));
+  for (let i = 0; i < freq1.length; i++) {
+    if (freq1[i] !== freq2[i]) flag = true;
+  }
+  return flag;
+}
+
+const validate = !isAnagram(123, 132) ? "Anagram" : "Not a anagram";
+console.log(validate);
+
+
+
+//have some Errors with Extracting number
 const checkFrequency = function (n, freq) {
   while (n > 0) {
     let digit = n % 10;
