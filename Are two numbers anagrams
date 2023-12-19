@@ -36,7 +36,8 @@ const validate = !isAnagram(123, 132) ? "Anagram" : "Not a anagram";
 console.log(validate);
 
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+CODE2:
 //have some Errors with Extracting number
 const checkFrequency = function (n, freq) {
   while (n > 0) {
